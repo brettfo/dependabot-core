@@ -16,7 +16,10 @@ Dependabot::UpdateCheckers.register("emptyreturn", Dependabot::EmptyReturn::Upda
 module Dependabot
   module EmptyReturn
     class FileParser < Dependabot::FileParsers::Base
-      def check_required_files
+      def check_required_files; end
+
+      def parse
+        []
       end
     end
   end
