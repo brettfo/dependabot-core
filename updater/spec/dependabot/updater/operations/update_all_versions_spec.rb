@@ -76,8 +76,6 @@ RSpec.describe Dependabot::Updater::Operations::UpdateAllVersions do
   end
 
   before do
-    Dependabot::UpdateCheckers
-      .register("emptyreturn", Dependabot::EmptyReturn::UpdateChecker)
     allow(Dependabot.logger).to receive(:info)
     stub_request(:get, "https://rubygems.org/api/v1/gems/business.json")
       .to_return(status: 200, body: fixture("ruby/rubygems_response.json"))
