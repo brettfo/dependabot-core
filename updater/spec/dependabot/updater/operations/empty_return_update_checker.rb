@@ -10,6 +10,3 @@ module Dependabot
     end
   end
 end
-
-Dependabot::UpdateCheckers
-  .register("emptyreturn", Dependabot::EmptyReturn::UpdateChecker)
