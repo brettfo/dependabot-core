@@ -10,3 +10,14 @@ module Dependabot
     end
   end
 end
+
+Dependabot::UpdateCheckers.register("emptyreturn", Dependabot::EmptyReturn::UpdateChecker)
+
+module Dependabot
+  module EmptyReturn
+    class FileParser < Dependabot::FileParsers::Base
+    end
+  end
+end
+
+Dependabot::FileParsers.register("emptyreturm", Dependabot::EmptyReturn::FileParser)
