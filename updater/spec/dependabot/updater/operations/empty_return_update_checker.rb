@@ -20,4 +20,4 @@ module Dependabot
   end
 end
 
-Dependabot::FileParsers.register("emptyreturm", Dependabot::EmptyReturn::FileParser)
+Dependabot::FileParsers.register("emptyreturn", Dependabot::EmptyReturn::FileParser)
