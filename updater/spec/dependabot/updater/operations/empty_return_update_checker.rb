@@ -1,3 +1,6 @@
+# typed: true
+# frozen_string_literal: true
+
 module Dependabot
   module EmptyReturn
     class UpdateChecker < Dependabot::UpdateCheckers::Base

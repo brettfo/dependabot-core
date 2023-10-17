@@ -119,9 +119,8 @@ RSpec.describe Dependabot::Updater::Operations::UpdateAllVersions do
     end
 
     it "does not update any dependencies" do
-      expect {
-        eat(subject.send(:check_and_create_pull_request, dependency))
-      }.to raise_error
+      expect(eat(subject.send(:check_and_create_pull_request, dependency)))
+        .to raise_error
     end
   end
 end
